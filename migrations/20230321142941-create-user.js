@@ -37,10 +37,6 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false,
       },
-      // image2: {
-      //   type: Sequelize.ARRAY(Sequelize.STRING),
-      //   allowNull: false,
-      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

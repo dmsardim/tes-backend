@@ -2,6 +2,10 @@ const errorHandler = (err, req, res, next) => {
   const multer = require('multer');
   let status = 500;
   let message = 'Internal server error';
+  if (!req.body.image) {
+    status = 400;
+    message = 'Image is required';
+  }
   if (err instanceof multer.MulterError) {
     // A Multer error occurred when uploading.
     status = 400;

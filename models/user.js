@@ -65,18 +65,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
         validate: {
-          notNull: { msg: 'image1 is required' },
-          notEmpty: { msg: 'image1 is required' },
+          notNull: { msg: 'image is required' },
+          notEmpty: { msg: 'image is required' },
         },
       },
-      // image2: {
-      //   type: DataTypes.ARRAY(DataTypes.STRING),
-      //   allowNull: false,
-      //   validate: {
-      //     notNull: { msg: 'image2 is required' },
-      //     notEmpty: { msg: 'image2 is required' },
-      //   },
-      // },
     },
     {
       sequelize,
