@@ -62,7 +62,21 @@ class Controller {
 
         let age = Math.abs(new Date().getFullYear() - new Date(dateOfBirth).getFullYear());
         const input = { name, age, dateOfBirth, phoneNumber, city, education, image: inputImg };
-
+        if (!name) {
+          throw { name: 'NameRequired' };
+        }
+        if (!dateOfBirth) {
+          throw { name: 'DateOfBirthRequired' };
+        }
+        if (!phoneNumber) {
+          throw { name: 'PhoneNumberRequired' };
+        }
+        if (!city) {
+          throw { name: 'CityRequired' };
+        }
+        if (!education) {
+          throw { name: 'EducationRequired' };
+        }
         res.status(201).json({ message: 'Success edit user' });
         await User.update(input, { where: { id } });
       }

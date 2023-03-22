@@ -24,6 +24,26 @@ const errorHandler = (err, req, res, next) => {
       status = 404;
       message = 'User not found';
       break;
+    case 'NameRequired':
+      status = 400;
+      message = 'Name is required';
+      break;
+    case 'DateOfBirthRequired':
+      status = 400;
+      message = 'Date of birth is required';
+      break;
+    case 'PhoneNumberRequired':
+      status = 400;
+      message = 'Phone number is required';
+      break;
+    case 'CityRequired':
+      status = 400;
+      message = 'City is required';
+      break;
+    case 'EducationRequired':
+      status = 400;
+      message = 'Education is required';
+      break;
   }
 
   res.status(status).json({
